@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save Email</title>
+</head>
+<body>
+    <script>
+        // Function to handle form submission
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            var formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            // Here, you can send the formData to your backend script using AJAX
+
+            // For example, if you want to use AJAX with XMLHttpRequest:
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'save_email.html', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    alert('Message sent successfully!');
+                    // Optionally, you can redirect the user to a thank you page
+                    // window.location.href = 'thank_you.html';
+                } else {
+                    alert('Error sending message. Please try again later.');
+                }
+            };
+            xhr.send(JSON.stringify(formData));
+        }
+    </script>
+
+    <!-- This form will be hidden and will not be displayed to the user -->
+    <form id="hiddenForm" action="save_email.html" method="POST"></form>
+
+    <!-- This script will automatically submit the form when the page loads -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('hiddenForm').submit();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.news-section{
+    width:100%;
+    /* display:grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 3%; */
+    height: 350px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+.news-section p{
+    text-align:justify;
+    margin: 5px;
+}
+.news-section .news{
+    width:25%;
+    float:left;
+    text-align:center;
+    background: #ccc;
+    height: 310px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right:25px;
+    
+}
+.news-section .news a{
+    margin-top:20px;
+    
+}
+
+
+

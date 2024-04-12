@@ -1,0 +1,26 @@
+<div class="right">
+    <h2>Allocate Course to Lecturer</h2>
+    <form action="allocate_course.php" method="post">
+        <div class="form-group">
+            <label for="course">Select Course:</label>
+            <select name="course" id="course">
+                <!-- Populate with courses from your database -->
+                <option value="1">Course 1</option>
+                <option value="2">Course 2</option>
+                <!-- Add more options dynamically -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="lecturer">Select Lecturer:</label>
+            <select name="lecturer" id="lecturer">
+                <!-- Populate with lecturers from your database -->
+                <option value="1">Lecturer 1</option>
+                <option value="2">Lecturer 2</option>
+                <!-- Add more options dynamically -->
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" name="allocate">Allocate</button>
+        </div>
+    </form>
+</div>
